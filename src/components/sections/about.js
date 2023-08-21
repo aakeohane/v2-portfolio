@@ -1,9 +1,9 @@
 import * as React from 'react'
-import Layout from '../components/layout'
 
-const AboutPage = () => {
+const About = () => {
+
   return (
-    <Layout pageTitle="About">
+    <div id="about">
       <h2>How did I know I was destined for coding?</h2>
       <p>
         I am always the first to google the moment someone asks a question.
@@ -16,10 +16,8 @@ const AboutPage = () => {
         living a zero waste lifestyle. When I'm not obsessing about responsive 
         design, you can find me on the tennis courts. Take a peak at my CV below.
       </p>
-    </Layout>
+    </div>
   )
 }
 
-export const Head = () => <title>About Me</title>
-
-export default AboutPage
+export default About

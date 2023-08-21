@@ -1,16 +1,35 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-import { navContainer, navLogo } from './navbar.module.css'
+import { navLogo } from './navbar.module.css'
 import { StaticImage } from 'gatsby-plugin-image'
+import scrollToElement from 'scroll-to-element'
 
 const Navbar = () => {
+  const smoothLinkClick = (e, target) => {
+    if (typeof window !== "undefined") {
+        if (e) e.preventDefault()
+        scrollToElement(target, {
+          offset: -100, // Offsets fixed header
+          duration: 1500,
+        })
+    }
+  }
+  
   return (
     <nav>
-      <ul className={navContainer}>
-        <li><StaticImage class={navLogo} src="../images/logo.png"></StaticImage></li>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-      </ul>
+      <StaticImage class={navLogo} alt="personal logo" src="../images/logo.png"></StaticImage>
+      <Link 
+        onClick={e => smoothLinkClick(e, '#landing')} 
+        to={"/#landing"}
+      >
+        Home
+      </Link>
+      <Link 
+        onClick={e => smoothLinkClick(e, '#about')} 
+        to={"/#about"}
+      >
+        About
+      </Link>
     </nav>
   )
 }

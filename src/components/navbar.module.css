@@ -1,20 +1,21 @@
-.nav-container {
-  max-width: 100vw;
-  background-color: yellow;
+nav {
   display: flex;
   align-items: center;
+  background-color: grey;
+  height: 90px;
+  padding: 30px 25px;
+  font-family: "Bebas Neue", sans-serif;
+  /* creates glassomorphism for navbar */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
 
-.nav-container :first-child {
-  flex: 1;
-}
-
-.nav-container li,
 a {
-  list-style: none;
   text-decoration: none;
 }
 
 .nav-logo {
   max-width: 75px;
+  margin-right: auto;
 }
