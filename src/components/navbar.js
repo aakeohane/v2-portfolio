@@ -1,20 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import { navLogo, glassomorph } from './navbar.module.css'
 import { StaticImage } from 'gatsby-plugin-image'
 import scrollToElement from 'scroll-to-element'
 
-const Navbar = () => {
-
-  const [offset, setOffset] = useState(0)
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.onscroll = () => {
-        setOffset(window.scrollY)
-      }
-    }
-  }, [])
+const Navbar = ({offset}) => {
   
   let opacity = offset * .008 //increases glassomorphism behind nav as you scroll up
   

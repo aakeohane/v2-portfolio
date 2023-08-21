@@ -1,11 +1,11 @@
 import * as React from 'react'
 import Navbar from './navbar'
 
-const Header = () => {
+const Header = ({offset}) => {
 
   return (
     <div style={{position: "sticky", top: 0,}}>
-      <Navbar/>
+      <Navbar offset={offset}/>
     </div>
   )
 }

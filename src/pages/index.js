@@ -1,16 +1,27 @@
-import * as React from 'react'
+import React, {useEffect, useState} from 'react'
 import Layout from '../components/layout'
 import About from '../components/sections/about'
 import Landing from '../components/sections/landing'
 import Header from '../components/header'
 
 const IndexPage = () => {
-  const mainLayout = [<Landing/>, <About/>]
+  const mainSections = [<Landing/>, <About/>]
+
+  const [offset, setOffset] = useState(0)
+
+  useEffect(() => {
+    // for some reason gatsby node environment doesnt allow referring to window, must do this for proper webpack build
+    if (typeof window !== "undefined") {
+      window.onscroll = () => {
+        setOffset(window.scrollY)
+      }
+    }
+  }, []) //creates {offset} value for scroll position
 
   return (
     <Layout>
-      <Header/>
-      {mainLayout.map((page, index) => (
+      <Header offset={offset}/>
+      {mainSections.map((page, index) => (
         <div key={index} style={{minHeight: "100vh", margin: "15px"}}>
           {page}
         </div>
