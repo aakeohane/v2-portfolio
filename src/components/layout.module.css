@@ -4,11 +4,10 @@
   box-sizing: border-box;
 }
 
-htmnl,
+html,
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  scroll-behavior: smooth;
 }
 
 .container {

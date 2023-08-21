@@ -11,7 +11,7 @@ const IndexPage = () => {
     <Layout>
       <Header/>
       {mainLayout.map((page, index) => (
-        <div id={`container${index}`} key={index} style={{minHeight: "100vh"}}>
+        <div key={index} style={{minHeight: "100vh", margin: "15px"}}>
           {page}
         </div>
       ))}

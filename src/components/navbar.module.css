@@ -1,21 +1,32 @@
 nav {
   display: flex;
   align-items: center;
-  background-color: grey;
-  height: 90px;
-  padding: 30px 25px;
+  height: 50px;
+  padding: 30px 15px;
   font-family: "Bebas Neue", sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
+.glassomorph {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   /* creates glassomorphism for navbar */
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background: rgba(19, 19, 19, 0.15);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1;
 }
 
 a {
   text-decoration: none;
+  margin-left: 5px;
 }
 
 .nav-logo {
-  max-width: 75px;
+  max-width: 50px;
   margin-right: auto;
 }

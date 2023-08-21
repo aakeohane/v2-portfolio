@@ -4,7 +4,7 @@ import Navbar from './navbar'
 const Header = () => {
 
   return (
-    <div style={{position: "sticky", top: 0}}>
+    <div style={{position: "sticky", top: 0,}}>
       <Navbar/>
     </div>
   )
