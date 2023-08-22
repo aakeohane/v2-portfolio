@@ -4,7 +4,7 @@ const About = () => {
 
   return (
     <div id="about">
-      <h2>How did I know I was destined for coding?</h2>
+      <h1>How did I know I was destined for coding?</h1>
       <p>
         I am always the first to google the moment someone asks a question.
         Besides my googling talent, my academic background in the sciences 

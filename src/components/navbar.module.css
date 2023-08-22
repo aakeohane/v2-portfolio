@@ -1,7 +1,7 @@
 nav {
   display: flex;
   align-items: center;
-  height: 50px;
+  height: 85px;
   padding: 30px 15px;
   font-family: "Bebas Neue", sans-serif;
   position: relative;
@@ -14,19 +14,21 @@ nav {
   bottom: 0;
   left: 0;
   right: 0;
-  /* creates glassomorphism for navbar */
   background: rgba(19, 19, 19, 0.15);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px); /* creates glassomorphism for navbar */
   -webkit-backdrop-filter: blur(4px);
   z-index: 1;
 }
 
-a {
+a,
+a:visited,
+a:active {
   text-decoration: none;
   margin-left: 5px;
+  color: var(--whale-yellow);
 }
 
 .nav-logo {
-  max-width: 50px;
-  margin-right: auto;
+  max-width: 60px;
+  /* filter: invert(100%); */
 }

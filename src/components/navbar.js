@@ -12,8 +12,9 @@ const Navbar = ({offset}) => {
     if (typeof window !== "undefined") {
         if (e) e.preventDefault()
         scrollToElement(target, {
-          offset: -60, // Offsets fixed header
-          duration: 500,
+          offset: -90, // Offsets fixed header
+          ease: 'out-quint',
+          duration: 1000,
         })
     }
   }
@@ -21,18 +22,30 @@ const Navbar = ({offset}) => {
   return (
     <div>
       <nav>
-        <StaticImage class={navLogo} alt="personal logo" src="../images/logo.png"></StaticImage>
         <Link 
+          style={{marginRight: "auto"}}
           onClick={e => smoothLinkClick(e, '#landing')} 
           to={"/#landing"}
         >
-          Home
+          <StaticImage class={navLogo} alt="personal logo" src="../images/Initials.png"></StaticImage>
         </Link>
         <Link 
           onClick={e => smoothLinkClick(e, '#about')} 
           to={"/#about"}
         >
-          About
+          About,
+        </Link>
+        <Link 
+          onClick={e => smoothLinkClick(e, '#work')} 
+          to={"/#work"}
+        >
+          Werk,
+        </Link>
+        <Link 
+          onClick={e => smoothLinkClick(e, '#contact')} 
+          to={"/#contact"}
+        >
+          Contact
         </Link>
       </nav>
       <div className={glassomorph} style={{opacity: (opacity > 1) ? 1 : opacity}}></div>

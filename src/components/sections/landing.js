@@ -3,7 +3,6 @@ import * as React from 'react'
 const Landing = () => {
   
   return (
-    <>
     <div id="landing">
       <h1>
         Hello. My name is Aaron Keohane.
@@ -16,7 +15,6 @@ const Landing = () => {
         yours.
       </p>
     </div>
-    </>
   )
 }
 
