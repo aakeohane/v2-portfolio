@@ -13,7 +13,7 @@ const Contact = () => {
       <p>
         email: aacunty@gmail.com
       </p>
-      <StaticImage className={whale} alt="watercolor whale" src="whale-watercolor.png"></StaticImage>
+      <StaticImage className={whale} alt="watercolor whale" src="../../images/whale-watercolor.png"></StaticImage>
     </div>
   )
 }
