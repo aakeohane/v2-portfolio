@@ -5,7 +5,7 @@ const Landing = () => {
   return (
     <div id="landing">
       <h1>
-        Hello. My name is Aaron Keohane.
+        Marine Biologist. <br></br>Developer.<br></br>Artist.
       </h1>
       <p>
         Welcome to my portfolio. I'm a web developer based 

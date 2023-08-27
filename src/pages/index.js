@@ -23,11 +23,11 @@ const IndexPage = () => {
   return (
     <Layout>
       <Header offset={offset}/>
-      {mainSections.map((page, index) => (
-        <div key={index} style={{minHeight: "100vh", margin: "15px"}}>
-          {page}
-        </div>
-      ))}
+        {mainSections.map((page, index) => (
+          <div key={index} style={{minHeight: "100vh", margin: "15px"}}>
+            {page}
+          </div>
+        ))}
     </Layout>
   )
 }

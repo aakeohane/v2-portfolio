@@ -7,7 +7,7 @@
 :root {
   --whale-yellow: #e6b342;
   --whale-blue: #04465d;
-  --watercolor-white: hsl(240, 11, 98, 100);
+  --inkblot-black: #333;
 }
 
 html,
@@ -18,7 +18,14 @@ body {
 
 .container {
   margin: 0;
-  background-color: var(--watercolor-white);
-  /* background-color: var(--whale-blue); */
-  color: var(--whale-yellow);
+  color: var(--inkblot-black);
+  background-image: url("http://api.thumbr.it/whitenoise-361x370.png?background=#fcfefeffff&noise=626262&density=18&opacity=13");
+  box-shadow: 2px 3px 20px black, 0 0 100px #ebe3d9ff inset;
+}
+
+h1 {
+  -webkit-text-stroke: 1px var(--whale-blue);
+  color: transparent;
+  text-shadow: 5px 3px 2px var(--inkblot-black);
+  font-size: 100px;
 }

@@ -6,7 +6,7 @@ import scrollToElement from 'scroll-to-element'
 
 const Navbar = ({offset}) => {
   
-  let opacity = offset * .008 //increases glassomorphism behind nav as you scroll up
+  let opacity = offset * .004 //increases glassomorphism behind nav as you scroll up
   
   const smoothLinkClick = (e, target) => {
     if (typeof window !== "undefined") {
