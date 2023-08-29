@@ -1,8 +1,7 @@
 nav {
   display: flex;
   align-items: center;
-  height: 85px;
-  padding: 30px 15px;
+  height: 75px;
   font-family: "Bebas Neue", sans-serif;
   position: relative;
   z-index: 2;
@@ -14,10 +13,27 @@ nav {
   bottom: 0;
   left: 0;
   right: 0;
-  /* background: rgba(19, 19, 19, 0.15); */
+  margin: 0 -15px 0 -15px;
+  background: rgba(220, 220, 220, 0.15);
   backdrop-filter: blur(4px); /* creates glassomorphism for navbar */
   -webkit-backdrop-filter: blur(4px);
   z-index: 1;
+}
+
+nav::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 75px;
+  filter: drop-shadow(0 0 1px var(--inkblot-black));
+  border-bottom: 1px solid;
+  border-image: linear-gradient(
+      to right,
+      var(--light-inkblot-black),
+      var(--inkblot-black),
+      var(--light-inkblot-black)
+    )
+    1;
 }
 
 a,
@@ -25,10 +41,11 @@ a:visited,
 a:active {
   text-decoration: none;
   margin-left: 5px;
-  color: var(--whale-yellow);
+  color: var(--whale-blue);
 }
 
 .nav-logo {
-  max-width: 60px;
-  /* filter: invert(100%); */
+  max-width: 65px;
+  filter: drop-shadow(0 0 1px var(--inkblot-black));
+  opacity: 0.9;
 }

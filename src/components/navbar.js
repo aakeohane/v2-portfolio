@@ -27,7 +27,7 @@ const Navbar = ({offset}) => {
           onClick={e => smoothLinkClick(e, '#landing')} 
           to={"/#landing"}
         >
-          <StaticImage class={navLogo} alt="personal logo" src="../images/Initials.png"></StaticImage>
+          <StaticImage class={navLogo} alt="personal logo" src="../images/logo.png"></StaticImage>
         </Link>
         <Link 
           onClick={e => smoothLinkClick(e, '#about')} 
